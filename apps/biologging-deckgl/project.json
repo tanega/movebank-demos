@@ -1,0 +1,54 @@
+{
+  "root": "apps/biologging-deckgl",
+  "sourceRoot": "apps/biologging-deckgl",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/biologging-deckgl",
+        "outputPath": "dist/apps/biologging-deckgl"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "biologging-deckgl:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "biologging-deckgl:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "biologging-deckgl:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/biologging-deckgl"],
+      "options": {
+        "jestConfig": "apps/biologging-deckgl/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/biologging-deckgl/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

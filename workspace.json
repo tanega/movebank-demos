@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "biologging-deckgl": "apps/biologging-deckgl",
+    "biologging-deckgl-e2e": "apps/biologging-deckgl-e2e"
+  }
+}

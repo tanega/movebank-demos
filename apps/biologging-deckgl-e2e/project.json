@@ -1,0 +1,28 @@
+{
+  "root": "apps/biologging-deckgl-e2e",
+  "sourceRoot": "apps/biologging-deckgl-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/biologging-deckgl-e2e/cypress.json",
+        "devServerTarget": "biologging-deckgl:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "biologging-deckgl:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/biologging-deckgl-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["biologging-deckgl"]
+}
