@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "biologging-deckgl": "apps/biologging-deckgl",
-    "biologging-deckgl-e2e": "apps/biologging-deckgl-e2e"
+    "biologging-deckgl-e2e": "apps/biologging-deckgl-e2e",
+    "core-ui": "libs/core-ui",
+    "core-ui-e2e": "apps/core-ui-e2e"
   }
 }
