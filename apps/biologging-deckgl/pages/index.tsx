@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Button } from '@mui/material';
 
 const StyledPage = styled.div`
   .page {
@@ -14,6 +15,7 @@ export function Index() {
   return (
     <StyledPage>
       <h2>Resources &amp; Tools</h2>
+      <Button>Truc</Button>
       <p>Thank you for using and showing some ♥ for Nx.</p>
       <div className="flex github-star-container">
         <a
